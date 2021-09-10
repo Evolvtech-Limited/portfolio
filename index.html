@@ -139,27 +139,27 @@
                   <tbody>
                     <tr>
                       <td>English</td>
-                      <td class="text-center" data-toggle="tooltip" data-placement="top" title="Native"><progress id="file" value="100" max="100">100%</progress></td>
-                      <td class="text-center" data-toggle="tooltip" data-placement="top" title="Native"><progress id="file" value="100" max="100">100%</progress></td>
-                      <td class="text-center" data-toggle="tooltip" data-placement="top" title="Native"><progress id="file" value="100" max="100">100%</progress></td>
+                      <td><progress id="file" value="100" max="100" data-bs-toggle="tooltip" data-bs-placement="top" title="Native">100%</progress></td>
+                      <td><progress id="file" value="100" max="100" data-bs-toggle="tooltip" data-bs-placement="top" title="Native">100%</progress></td>
+                      <td><progress id="file" value="100" max="100" data-bs-toggle="tooltip" data-bs-placement="top" title="Native">100%</progress></td>
                     </tr>
                     <tr>
                       <td>French</td>
-                      <td class="text-center" data-toggle="tooltip" data-placement="top" title="Fluent"><progress id="file" value="100" max="100">100%</progress></td>
-                      <td class="text-center" data-toggle="tooltip" data-placement="top" title="Fluent"><progress id="file" value="100" max="100">100%</progress></td>
-                      <td class="text-center" data-toggle="tooltip" data-placement="top" title="Fluent"><progress id="file" value="100" max="100">100%</progress></td>
+                      <td class="text-center" data-bs-toggle="tooltip" data-bs-placement="top" title="Bilingual"><progress id="file" value="100" max="100">100%</progress></td>
+                      <td class="text-center" data-bs-toggle="tooltip" data-bs-placement="top" title="Bilingual"><progress id="file" value="100" max="100">100%</progress></td>
+                      <td class="text-center" data-bs-toggle="tooltip" data-bs-placement="top" title="Bilingual"><progress id="file" value="100" max="100">100%</progress></td>
                     </tr>
                     <tr>
                       <td>Wolof</td>
-                      <td class="text-center" data-toggle="tooltip" data-placement="top" title="Intermediate"><progress id="file" value="50" max="100">100%</progress></td>
-                      <td class="text-center" data-toggle="tooltip" data-placement="top" title="Intermediate"><progress id="file" value="25" max="100">100%</progress></td>
-                      <td class="text-center" data-toggle="tooltip" data-placement="top" title="Intermediate"><progress id="file" value="85" max="100">100%</progress></td>
+                      <td class="text-center" data-bs-toggle="tooltip" data-placement="top" title="Proficient"><progress id="file" value="50" max="100">100%</progress></td>
+                      <td class="text-center" data-bs-toggle="tooltip" data-bs-placement="top" title="Elementary"><progress id="file" value="25" max="100">100%</progress></td>
+                      <td class="text-center" data-bs-toggle="tooltip" data-bs-placement="top" title="Intermediate"><progress id="file" value="85" max="100">100%</progress></td>
                     </tr>
                     <tr>
                       <td>Spanish</td>
-                      <td class="text-center" data-toggle="tooltip" data-placement="top" title="Basic"><progress id="file" value="30" max="100">100%</progress></td>
-                      <td class="text-center" data-toggle="tooltip" data-placement="top" title="Basic"><progress id="file" value="25" max="100">100%</progress></td>
-                      <td class="text-center" data-toggle="tooltip" data-placement="top" title="Basic"><progress id="file" value="30" max="100">100%</progress></td>
+                      <td><progress id="file" value="30" max="100" data-bs-toggle="tooltip" data-bs-placement="top" title="Elementary">100%</progress></td>
+                      <td><progress id="file" value="25" max="100" data-bs-toggle="tooltip" data-bs-placement="top" title="Elementary">100%</progress></td>
+                      <td><progress id="file" value="30" max="100" data-bs-toggle="tooltip" data-bs-placement="top" title="Elementary">100%</progress></td>
                     </tr>
                   </tbody>
                 </table>
@@ -789,31 +789,47 @@
             </div>
 
             <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
-              <form action="forms/contact.php" method="post" role="form" class="php-email-form">
-                <div class="row">
-                  <div class="form-group col-md-6">
-                    <label for="name">Your Name</label>
-                    <input type="text" name="name" class="form-control" id="name" required>
+              <form id="contactform" action="https://formsubmit.io/send/backendbackbonner@outlook.com" method="POST">
+                <!-- <input type="hidden" name="_next" value="https://backend-backboners.github.io/portfolio/pages/thanks.html"> -->
+                <div class="php-email-form">
+                  <div class="row">
+
+                    <div class="form-group col-md-6">
+                      <label for="name">Your Name</label>
+                      <input type="text" name="name" class="form-control" id="name" required>
+                    </div>
+
+                    <div class="form-group col-md-6">
+                      <label for="name">Your Email</label>
+                      <input type="email" class="form-control" name="email" id="email" required>
+                    </div>
+
                   </div>
-                  <div class="form-group col-md-6">
-                    <label for="name">Your Email</label>
-                    <input type="email" class="form-control" name="email" id="email" required>
+
+                  <div class="form-group">
+                    <label for="name">Subject</label>
+                    <input type="text" class="form-control" name="subject" id="subject" required>
                   </div>
+
+                  <div class="form-group">
+                    <label for="name">Message</label>
+                    <textarea class="form-control" name="message" rows="10" required></textarea>
+                  </div>
+
+                  <!-- <div class="form-group">
+                    <span class="ms-2">Accept our <a href="terms.html">terms of service</a> and <a href="privacy.html">privacy policy</a></span>
+                    <input type="checkbox" name="privacy" value="accept" class="float-left h-auto mt-1" data-rule="checked" data-msg="Please, accept our terms of service and privacy acy policy">
+                    <div class="validate"></div>
+                  </div> -->
+                  
+                  <!-- <div class="my-3">
+                    <div class="loading">Loading</div>
+                    <div class="error-message"></div>
+                    <div class="sent-message">Your message has been sent. Thank you!</div>
+                  </div> -->
+
+                  <div class="text-center"><button type="submit" class="">Send Message</button></div>
                 </div>
-                <div class="form-group">
-                  <label for="name">Subject</label>
-                  <input type="text" class="form-control" name="subject" id="subject" required>
-                </div>
-                <div class="form-group">
-                  <label for="name">Message</label>
-                  <textarea class="form-control" name="message" rows="10" required></textarea>
-                </div>
-                <div class="my-3">
-                  <div class="loading">Loading</div>
-                  <div class="error-message"></div>
-                  <div class="sent-message">Your message has been sent. Thank you!</div>
-                </div>
-                <div class="text-center"><button type="submit">Send Message</button></div>
               </form>
             </div>
 
@@ -837,6 +853,7 @@
     <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
     <!-- Vendor JS Files -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="assets/vendor/aos/aos.js"></script>
     <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
@@ -850,6 +867,13 @@
     <!-- Main JS File -->
     <script src="assets/js/main.js"></script>
 
+    <!-- Extra JS-->
+    <script>
+      var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+      var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl)
+      })
+    </script>
   </body>
 
 </html>
