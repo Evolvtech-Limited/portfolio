@@ -33,17 +33,6 @@
     <link href="assets/css/style.css" rel="stylesheet">
 
     <!-- Extra Styles -->
-    <link rel="stylesheet" href="assets/css/tooltip.css">
-
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1BJMRMYFN8"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'G-1BJMRMYFN8');
-    </script>
 
   </head>
 
@@ -821,7 +810,8 @@
 
             <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
               <form id="contactform" action="https://formsubmit.io/send/backendbackbonner@outlook.com" method="POST">
-                <input type="hidden" name="_next" value="https://backend-backboners.github.io/portfolio/pages/thanks.html">
+                <input name="_redirect" type="hidden" id="name" value="https://backend-backboners.github.io/portfolio/thanks.html">
+                
                 <div class="php-email-form">
                   <div class="row">
 
@@ -844,22 +834,19 @@
 
                   <div class="form-group">
                     <label for="name">Message</label>
-                    <textarea class="form-control" name="message" rows="10" required></textarea>
+                    <!-- <textarea class="form-control" name="message" rows="10" required></textarea> -->
+                    <textarea name="comment" class="form-control" id="comment" rows="3" required></textarea>
                   </div>
 
-                  <!-- <div class="form-group">
+                  <input name="_formsubmit_id" type="text" style="display:none">
+
+                  <div class="form-group">
                     <span class="ms-2">Accept our <a href="terms.html">terms of service</a> and <a href="privacy.html">privacy policy</a></span>
                     <input type="checkbox" name="privacy" value="accept" class="float-left h-auto mt-1" data-rule="checked" data-msg="Please, accept our terms of service and privacy acy policy">
                     <div class="validate"></div>
-                  </div> -->
-                  
-                  <!-- <div class="my-3">
-                    <div class="loading">Loading</div>
-                    <div class="error-message"></div>
-                    <div class="sent-message">Your message has been sent. Thank you!</div>
-                  </div> -->
+                  </div>
 
-                  <div class="text-center"><button type="submit" class="">Send Message</button></div>
+                  <div class="text-center"><button type="submit">Send Message</button></div>
                 </div>
               </form>
             </div>
@@ -898,7 +885,7 @@
     <!-- Main JS File -->
     <script src="assets/js/main.js"></script>
 
-    <!-- Extra JS-->
+    <!-- Tooltip -->
     <script>
       var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
       var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {

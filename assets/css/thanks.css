@@ -1,0 +1,57 @@
+.extra-page {
+    margin-top: 5%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.logo {
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    font-size: 20px;
+    text-decoration: none !important;
+    text-align: center;
+    /* margin: 30px 0px 0px 25px; */
+    margin-top: 30px;
+    display: inline-block;
+    /* color: #2a323c !important; */
+    color: #043d83 !important;
+}
+
+.extra-page .logo {
+    margin-bottom: 80px;
+    display: inline-block;
+}
+
+img {
+    vertical-align: middle;
+    border: 0;
+}
+
+.sign-pages {
+    padding: 40px;
+    border: 2px solid #ededeb;
+    border-radius: 10px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/* .h3, h3 {
+    font-size: 24px;
+} */
+/* .h1, .h2, .h3, h1, h2, h3 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+} */
+/* .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+    font-family: inherit;
+    font-weight: 500;
+    line-height: 1.1;
+    color: inherit;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+} */
+
+
