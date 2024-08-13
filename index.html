@@ -23,6 +23,74 @@
     <!-- Main CSS File -->
     <link href="assets/css/tbjr.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/screen-sizes.css">
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6B2GQTH3SV"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-6B2GQTH3SV');
+    </script>
+
+    <!-- Call-to-action button | Start of Async Drift Code -->
+    <script>
+      "use strict";
+
+      (function() {
+        const drift = window.driftt = window.drift = window.driftt || [];
+
+        if (!drift.init) {
+          if (drift.invoked) {
+            if (window.console && console.error) {
+              console.error("Drift snippet included twice.");
+            }
+            return;
+          }
+
+          drift.invoked = true;
+          drift.methods = [
+            "identify", "config", "track", "reset", "debug", "show",
+            "ping", "page", "hide", "off", "on"
+          ];
+
+          drift.factory = function(method) {
+            return function() {
+              const args = Array.prototype.slice.call(arguments);
+              args.unshift(method);
+              drift.push(args);
+              return drift;
+            };
+          };
+
+          drift.methods.forEach(function(method) {
+            drift[method] = drift.factory(method);
+          });
+
+          drift.load = function(accountId) {
+            const timeInterval = 300000; // 5 minutes in milliseconds
+            const timestamp = Math.ceil(new Date() / timeInterval) * timeInterval;
+            const script = document.createElement("script");
+
+            script.type = "text/javascript";
+            script.async = true;
+            script.crossOrigin = "anonymous";
+            script.src = `https://js.driftt.com/include/${timestamp}/${accountId}.js`;
+
+            const firstScript = document.getElementsByTagName("script")[0];
+            firstScript.parentNode.insertBefore(script, firstScript);
+          };
+
+          // Mark that the Drift snippet has been initialized
+          drift.init = true;
+        }
+      })();
+
+      drift.SNIPPET_VERSION = '0.3.1';
+      drift.load('928v33akxcpz');
+    </script>
+
   </head>
 
   <body>
@@ -49,13 +117,16 @@
           <span></span>
         </div>
         <div class="menu-links">
-          <li><a href="#about" onclick="toggleMenu()">About</a></li>
-          <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
-          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
-          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+          <ul>
+            <li><a href="#about" onclick="toggleMenu()">About</a></li>
+            <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+             <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+             <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+          </ul>
         </div>
       </div>
     </nav>
+
 
     <!-- Profile-->
     <section id="profile">
