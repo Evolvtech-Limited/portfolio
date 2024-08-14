@@ -1,0 +1,20 @@
+{
+  "short_name":"TBJr",
+  "name":"Thomas Brown",
+  "icons":[
+    {
+      "src":"https://thomasbrown.app/assets/img/favicon-192x192.png",
+      "type":"image/png",
+      "sizes":"192x192",
+      "purpose":"any maskable"
+    },
+    {
+      "src":"https://thomasbrown.app/assets/img/favicon.png",
+      "type":"image/png",
+      "sizes":"500x500",
+      "purpose":"any maskable"
+    }
+  ],
+  "start_url":"https://thomasbrown.app",
+  "display":"fullscreen"
+}
