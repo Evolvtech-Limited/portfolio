@@ -13,8 +13,18 @@
       "type":"image/png",
       "sizes":"500x500",
       "purpose":"any maskable"
+    },
+    {
+      "src": "https://thomasbrown.app/assets/img/favicon-512x512.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "any maskable"
     }
   ],
-  "start_url":"https://thomasbrown.app",
-  "display":"fullscreen"
+  "start_url": "https://thomasbrown.app",
+  "display": "fullscreen",
+  "background_color": "#ffffff",
+  "theme_color": "#333333",
+  "description": "Thomas Brown's professional portfolio and web presence.",
+  "orientation": "portrait"
 }
