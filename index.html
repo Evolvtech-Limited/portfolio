@@ -73,61 +73,64 @@
     </script>
 
     <!-- Call-to-action button | Start of Async Drift Code -->
-    <script>
-      "use strict";
+<!--    <script>-->
+<!--      "use strict";-->
 
-      (function() {
-        const drift = window.driftt = window.drift = window.driftt || [];
+<!--      (function() {-->
+<!--        const drift = window.driftt = window.drift = window.driftt || [];-->
 
-        if (!drift.init) {
-          if (drift.invoked) {
-            if (window.console && console.error) {
-              console.error("Drift snippet included twice.");
-            }
-            return;
-          }
+<!--        if (!drift.init) {-->
+<!--          if (drift.invoked) {-->
+<!--            if (window.console && console.error) {-->
+<!--              console.error("Drift snippet included twice.");-->
+<!--            }-->
+<!--            return;-->
+<!--          }-->
 
-          drift.invoked = true;
-          drift.methods = [
-            "identify", "config", "track", "reset", "debug", "show",
-            "ping", "page", "hide", "off", "on"
-          ];
+<!--          drift.invoked = true;-->
+<!--          drift.methods = [-->
+<!--            "identify", "config", "track", "reset", "debug", "show",-->
+<!--            "ping", "page", "hide", "off", "on"-->
+<!--          ];-->
 
-          drift.factory = function(method) {
-            return function() {
-              const args = Array.prototype.slice.call(arguments);
-              args.unshift(method);
-              drift.push(args);
-              return drift;
-            };
-          };
+<!--          drift.factory = function(method) {-->
+<!--            return function() {-->
+<!--              const args = Array.prototype.slice.call(arguments);-->
+<!--              args.unshift(method);-->
+<!--              drift.push(args);-->
+<!--              return drift;-->
+<!--            };-->
+<!--          };-->
 
-          drift.methods.forEach(function(method) {
-            drift[method] = drift.factory(method);
-          });
+<!--          drift.methods.forEach(function(method) {-->
+<!--            drift[method] = drift.factory(method);-->
+<!--          });-->
 
-          drift.load = function(accountId) {
-            const timeInterval = 300000; // 5 minutes in milliseconds
-            const timestamp = Math.ceil(new Date() / timeInterval) * timeInterval;
-            const script = document.createElement("script");
+<!--          drift.load = function(accountId) {-->
+<!--            const timeInterval = 300000; // 5 minutes in milliseconds-->
+<!--            const timestamp = Math.ceil(new Date() / timeInterval) * timeInterval;-->
+<!--            const script = document.createElement("script");-->
 
-            script.type = "text/javascript";
-            script.async = true;
-            script.crossOrigin = "anonymous";
-            script.src = `https://js.driftt.com/include/${timestamp}/${accountId}.js`;
+<!--            script.type = "text/javascript";-->
+<!--            script.async = true;-->
+<!--            script.crossOrigin = "anonymous";-->
+<!--            script.src = `https://js.driftt.com/include/${timestamp}/${accountId}.js`;-->
 
-            const firstScript = document.getElementsByTagName("script")[0];
-            firstScript.parentNode.insertBefore(script, firstScript);
-          };
+<!--            const firstScript = document.getElementsByTagName("script")[0];-->
+<!--            firstScript.parentNode.insertBefore(script, firstScript);-->
+<!--          };-->
 
-          // Mark that the Drift snippet has been initialized
-          drift.init = true;
-        }
-      })();
+<!--          // Mark that the Drift snippet has been initialized-->
+<!--          drift.init = true;-->
+<!--        }-->
+<!--      })();-->
 
-      drift.SNIPPET_VERSION = '0.3.1';
-      drift.load('928v33akxcpz');
-    </script>
+<!--      drift.SNIPPET_VERSION = '0.3.1';-->
+<!--      drift.load('928v33akxcpz');-->
+<!--    </script>-->
+
+    <!-- JavaScript for Translation -->
+    <script src="assets/js/translation.js" defer></script>
   </head>
   <body>
     <!-- Desktop Navigation -->
@@ -135,8 +138,8 @@
       <div class="logo">TBJr</div>
       <div>
         <ul class="nav-links">
-          <li><a href="#about" aria-label="About Section">About</a></li>
-          <li><a href="#experience" aria-label="Experience Section">Experience</a></li>
+          <li><a href="#about" aria-label="About Section" id="abts">About</a></li>
+          <li><a href="#experience" aria-label="Experience Section" id="experiense">Experience</a></li>
           <li><a href="#contact" aria-label="Contact Section">Contact</a></li>
         </ul>
       </div>
@@ -154,7 +157,7 @@
         <div class="menu-links">
           <ul>
             <li><a href="#about" onclick="toggleMenu()" aria-label="About Section">About</a></li>
-            <li><a href="#experience" onclick="toggleMenu()" aria-label="Experience Section">Experience</a></li>
+            <li><a href="#experience" onclick="toggleMenu()" aria-label="Experience Section" id="">Experience</a></li>
             <li><a href="#contact" onclick="toggleMenu()" aria-label="Contact Section">Contact</a></li>
           </ul>
         </div>
@@ -170,12 +173,12 @@
 
       <!-- Welcome text -->
       <div class="section__text">
-        <p class="section__text__p1">Hello, I'm</p>
+        <p id="welcome" class="section__text__p1">Hello, I'm</p>
         <h1 class="title">Thomas Brown</h1>
-        <p class="section__text__p2">Full-stack Software Developer</p>
+        <p id="fullstack_developer"  class="section__text__p2">Full-stack Software Developer</p>
         <div class="btn-container">
-          <button class="btn btn-sm btn-color-2" onclick="window.open('./assets/resume-example.pdf')" disabled aria-label="Download CV button"> Download CV</button>
-          <button class="btn btn-sm btn-color-1" onclick="location.href='./#contact'" aria-label="Contact Info button"> Contact Info</button>
+          <button id="download_cv" class="btn btn-sm btn-color-2" onclick="window.open('./assets/resume-example.pdf')" disabled aria-label="Download CV button">Download CV</button>
+          <button id="contact_info" class="btn btn-sm btn-color-1" onclick="location.href='./#contact'" aria-label="Contact Info button"> Contact Info</button>
         </div>
         <div id="socials-container">
           <img src="./assets/linkedin.png"
