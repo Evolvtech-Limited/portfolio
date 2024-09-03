@@ -2,13 +2,28 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
 
+/* CSS Variables */
+:root {
+    --primary-font: "Poppins", sans-serif;
+    --primary-color: rgb(85, 85, 85);
+    --secondary-color: rgb(53, 53, 53);
+    --hover-color: grey;
+    --border-color: rgb(163, 163, 163);
+    --background-color: white;
+    --transition-speed: 300ms;
+    --btn-bg-color: none;
+    --btn-hover-bg-color: rgb(0, 0, 0);
+    --btn-hover-color: white;
+}
+
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-    font-family: "Poppins", sans-serif;
+    font-family: var(--primary-font), sans-serif;
 }
 
 html {
@@ -16,13 +31,13 @@ html {
 }
 
 p {
-    color: rgb(85, 85, 85);
+    color: var(--primary-color);
 }
 
 /* TRANSITION */
 a,
 .btn {
-    transition: all 300ms ease;
+    transition: all var(--transition-speed) ease;
 }
 
 /* DESKTOP NAV */
@@ -50,10 +65,10 @@ a {
 }
 
 a:hover {
-    color: grey;
+    color: var(--hover-color);
     text-decoration: underline;
     text-underline-offset: 1rem;
-    text-decoration-color: rgb(181, 181, 181);
+    text-decoration-color: var(--border-color);
 }
 
 .logo {
@@ -118,7 +133,7 @@ a:hover {
     position: absolute;
     top: 100%;
     right: 0;
-    background-color: white;
+    background-color: var(--background-color);
     width: fit-content;
     max-height: 0;
     overflow: hidden;
@@ -147,7 +162,7 @@ a:hover {
 /* SECTIONS */
 section {
     padding-top: 4vh;
-    height: 96vh;
+    /*height: 96vh;*/  /* This prevents the contact section from showing properly */
     margin: 0 10rem;
     box-sizing: border-box;
     min-height: fit-content;
@@ -155,6 +170,8 @@ section {
 
 .section-container {
     display: flex;
+    gap: 4rem;
+    height: 80%;
 }
 
 /* PROFILE SECTION */
@@ -163,18 +180,25 @@ section {
     justify-content: center;
     gap: 5rem;
     height: 80vh;
+    flex-wrap: wrap;
 }
 
 .section__pic-container {
     display: flex;
-    height: 400px;
-    width: 400px;
+    /*height: 400px;*/
+    /*width: 400px;*/
+    height: auto;
+    width: 100%;
+    max-width: 400px;
     margin: auto 0;
+    justify-content: center;
 }
 
 .section__text {
     align-self: center;
     text-align: center;
+    flex: 1;
+    min-width: 280px;
 }
 
 .section__text p {
@@ -217,7 +241,7 @@ section {
 
 .btn {
     font-weight: 600;
-    transition: all 300ms ease;
+    transition: all var(--transition-speed) ease;
     padding: 1rem;
     width: 8rem;
     border-radius: 2rem;
@@ -225,7 +249,7 @@ section {
 
 .btn-color-1,
 .btn-color-2 {
-    border: rgb(53, 53, 53) 0.1rem solid;
+    border: var(--secondary-color) 0.1rem solid;
 }
 
 .btn-color-1:hover,
@@ -235,20 +259,20 @@ section {
 
 .btn-color-1,
 .btn-color-2:hover {
-    background: rgb(53, 53, 53);
-    color: white;
+    background: var(--secondary-color);
+    color: var(--btn-hover-color);
 }
 
 .btn-color-1:hover {
-    background: rgb(0, 0, 0);
+    background: var(--btn-hover-bg-color);
 }
 
 .btn-color-2 {
-    background: none;
+    background: var(--btn-bg-color);
 }
 
 .btn-color-2:hover {
-    border: rgb(255, 255, 255) 0.1rem solid;
+    border: var(--btn-hover-color) 0.1rem solid;
 }
 
 .btn-container {
@@ -289,10 +313,10 @@ section {
 .details-container {
     padding: 1.5rem;
     flex: 1;
-    background: white;
+    background: var(--background-color);
     border-radius: 2rem;
-    border: rgb(53, 53, 53) 0.1rem solid;
-    border-color: rgb(163, 163, 163);
+    border: var(--secondary-color) 0.1rem solid;
+    border-color: var(--border-color);
     text-align: center;
 }
 
@@ -313,7 +337,7 @@ section {
 }
 
 .experience-sub-title {
-    color: rgb(85, 85, 85);
+    color: var(--primary-color);
     font-weight: 600;
     font-size: 1.75rem;
     margin-bottom: 2rem;
@@ -348,32 +372,6 @@ article .icon {
     cursor: default;
 }
 
-/* PROJECTS SECTION */
-#projects {
-    position: relative;
-}
-
-.color-container {
-    border-color: rgb(163, 163, 163);
-    background: rgb(250, 250, 250);
-}
-
-.project-img {
-    border-radius: 2rem;
-    width: 90%;
-    height: 90%;
-}
-
-.project-title {
-    margin: 1rem;
-    color: black;
-}
-
-.project-btn {
-    color: black;
-    border-color: rgb(163, 163, 163);
-}
-
 /* CONTACT */
 
 #contact {
@@ -387,13 +385,12 @@ article .icon {
     display: flex;
     justify-content: center;
     border-radius: 2rem;
-    border: 0.1rem solid rgb(53, 53, 53);
-    border-color: rgb(163, 163, 163);
-    background: rgb(250, 250, 250);
+    border: 0.1rem solid var(--secondary-color);
+    border-color: var(--border-color);
+    background: var(--background-color);
     margin: 2rem auto;
     padding: 0.5rem;
 }
-
 
 .contact-info-container {
     display: flex;
