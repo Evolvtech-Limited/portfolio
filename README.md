@@ -51,7 +51,7 @@ Ensure you have the following installed:
 
 1. Clone the repository:
    \`\`\`sh
-   git clone https://github.com/Backend-Backboners/portfolio.git
+   git clone https://github.com/Evolvtech-Limited/portfolio.git
    \`\`\`
 2. Navigate to the project directory:
    \`\`\`sh
@@ -82,6 +82,6 @@ Distributed under the MIT License. See `LICENSE` for more information.
 ## Contact
 
 - **Name**: Thomas Brown
-- **GitHub**: [TBJr](https://github.com/Backend-Backboners)
-- **Email**: [My Email](mailto:backendbackbonner@outlook.com)
+- **GitHub**: [TBJr](https://github.com/Evolvtech-Limited)
+- **Email**: [My Email](mailto:retweet_cruet0r@icloud.com)
 
