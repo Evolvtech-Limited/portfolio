@@ -184,7 +184,7 @@ a:hover {
 section {
     padding-top: 4vh;
     /*height: 96vh;*/  /* This prevents the contact section from showing properly */
-    margin: 0 10rem;
+    margin: 0 8rem;
     box-sizing: border-box;
     min-height: fit-content;
 }
