@@ -139,7 +139,7 @@
         <ul class="nav-links">
           <li><a href="#about" aria-label="About Section" id="abts">About</a></li>
           <li><a href="#experience" aria-label="Experience Section" id="experiense">Experience</a></li>
-          <li><a href="#contact" aria-label="Contact Section">Contact</a></li>
+          <li><a href="#contact" aria-label="Contact Section" id="contacts">Contact</a></li>
         </ul>
       </div>
     </nav>
@@ -155,9 +155,9 @@
         </div>
         <div class="menu-links">
           <ul>
-            <li><a href="#about" onclick="toggleMenu()" aria-label="About Section">About</a></li>
-            <li><a href="#experience" onclick="toggleMenu()" aria-label="Experience Section" id="">Experience</a></li>
-            <li><a href="#contact" onclick="toggleMenu()" aria-label="Contact Section">Contact</a></li>
+            <li><a href="#about" onclick="toggleMenu()" aria-label="About Section" id="nav-about">About</a></li>
+            <li><a href="#experience" onclick="toggleMenu()" aria-label="Experience Section" id="nav-experiense">Experience</a></li>
+            <li><a href="#contact" onclick="toggleMenu()" aria-label="Contact Section" id="nav-contact">Contact</a></li>
           </ul>
         </div>
       </div>
@@ -200,7 +200,7 @@
 
     <!-- About -->
     <section id="about">
-      <p class="section__text__p1">Get To Know More</p>
+      <p id="getToKnowMore" class="section__text__p1">Get To Know More</p>
       <h1 id="about_me" class="title">About Me</h1>
 
       <div class="section-container">
@@ -213,22 +213,22 @@
           <div class="about-containers">
             <div class="details-container">
               <img src="./assets/experience.png" alt="Experience icon" class="icon" loading="lazy"/>
-              <h3>Experience</h3>
-              <p>5+ years <br />Full-stack Software Development</p>
+              <h3 id="about-experience">Experience</h3>
+              <p id="exp-years">5+ years</p>
+              <p id="fullstack_development">Full-stack Software Development</p>
+
             </div>
 
             <div class="details-container">
               <img src="./assets/education.png" alt="Education icon" class="icon" loading="lazy"/>
-              <h3>Education</h3>
+              <h3 id="education">Education</h3>
               <p>B.C.S. Bachelors Degree</p>
             </div>
           </div>
 
           <div class="text-container">
-            <p>
-              Passionate about Computer Science & Engineering, with 5+ years of professional experience.
-              Technologies of interest are Web and App Development. Proficient in Data Structures and Algorithms.
-              I love learning new technologies and implementing them in projects.
+            <p id="summary">
+              Enthusiastic about Computer Science & Engineering, backed by 5+ years of hands-on experience. My expertise lies in Web and App Development, with a strong command of Data Structures and Algorithms. I thrive on embracing new technologies and integrating them into innovative projects.
             </p>
           </div>
         </div>
@@ -238,15 +238,15 @@
 
     <!-- Experience -->
     <section id="experience">
-      <p class="section__text__p1">Explore My</p>
-      <h1 class="title">Experience</h1>
+      <p id="explore" class="section__text__p1">Explore My</p>
+      <h1 id="exp" class="title">Experience</h1>
 
       <div class="experience-details-container">
         <div class="about-containers">
           <!--  Programming Languages & Frontend Technologies -->
           <div class="details-container">
             <!-- Programming Languages -->
-            <h2 class="experience-sub-title">Programming Languages</h2>
+            <h2 id="progLang" class="experience-sub-title">Programming Languages</h2>
             <div class="article-container">
               <!-- JavaScript -->
               <article>
@@ -288,7 +288,7 @@
             <br> <hr> <br>
 
             <!-- Frontend Technologies -->
-            <h2 class="experience-sub-title">Frontend Technologies</h2>
+            <h2 id="front_tech" class="experience-sub-title">Frontend Technologies</h2>
             <div class="article-container">
               <!-- HTML5 -->
               <article>
@@ -375,7 +375,7 @@
             <br> <hr> <br>
 
             <!-- Backend Technologies -->
-            <h2 class="experience-sub-title">Backend Technologies</h2>
+            <h2 id="back_tech" class="experience-sub-title">Backend Technologies</h2>
             <div class="article-container">
               <!-- NodeJs -->
               <article>
@@ -436,7 +436,7 @@
           <!-- Database Management | Version Control Systems | Cloud Computing Services -->
           <div class="details-container">
             <!-- Database Management -->
-            <h2 class="experience-sub-title">Database Management</h2>
+            <h2 id="db_m" class="experience-sub-title">Database Management</h2>
             <div class="article-container">
               <!-- MySQL -->
               <article>
@@ -469,7 +469,7 @@
             <br> <hr> <br>
 
             <!-- Version Control Systems -->
-            <h2 class="experience-sub-title">Version Control Systems</h2>
+            <h2 id="version_control" class="experience-sub-title">Version Control Systems</h2>
             <div class="article-container">
               <!-- Git -->
               <article>
@@ -493,7 +493,7 @@
             <br> <hr> <br>
 
             <!-- Cloud Computing Services -->
-            <h2 class="experience-sub-title">Cloud Computing Services</h2>
+            <h2 id="cloud_service" class="experience-sub-title">Cloud Computing Services</h2>
             <div class="article-container">
               <!-- AWS -->
               <article>
@@ -517,7 +517,7 @@
             <br> <hr> <br>
 
             <!-- Operating Systems -->
-            <h2 class="experience-sub-title">Operating Systems</h2>
+            <h2 id="os" class="experience-sub-title">Operating Systems</h2>
             <div class="article-container">
               <!-- Linux -->
               <article>
@@ -550,7 +550,7 @@
             <br> <hr> <br>
 
             <!-- Virtualization and Containerization -->
-            <h2 class="experience-sub-title">Virtualization and Containerization</h2>
+            <h2 id="vm" class="experience-sub-title">Virtualization and Containerization</h2>
             <div class="article-container">
               <!-- VMware -->
               <article>
@@ -587,13 +587,13 @@
 
     <!-- Contact Me -->
     <section id="contact">
-      <p class="section__text__p1">Get in Touch</p>
+      <p id="get_in_touch" class="section__text__p1">Get in Touch</p>
       <h1 id="contact_me" class="title">Contact Me</h1>
 
       <div class="contact-info-upper-container">
         <div class="contact-info-container">
           <img src="./assets/email.png" alt="Email icon" class="icon contact-icon email-icon" loading="lazy"/>
-          <p><a href="mailto:retweet_cruet0r@icloud.com" aria-label="Send Email to Thomas Brown">Email Me</a></p>
+          <p><a href="mailto:retweet_cruet0r@icloud.com" aria-label="Send Email to Thomas Brown" id="email_me">Email Me</a></p>
         </div>
 
         <div class="contact-info-container">
@@ -608,13 +608,13 @@
       <nav>
         <div class="nav-links-container">
           <ul class="nav-links">
-            <li><a href="#about" aria-label="About Section">About</a></li>
-            <li><a href="#experience" aria-label="Experience Section">Experience</a></li>
-            <li><a href="#contact" aria-label="Contact Section">Contact</a></li>
+            <li><a href="#about" aria-label="About Section" id="footer_about">About</a></li>
+            <li><a href="#experience" aria-label="Experience Section" id="footer_experience">Experience</a></li>
+            <li><a href="#contact" aria-label="Contact Section" id="footer_contact">Contact</a></li>
           </ul>
         </div>
       </nav>
-      <p>Copyright &#169; 2020 - 2024 Thomas S Brown. All Rights Reserved.</p>
+      <p id="copyrighta">Copyright &#169; 2020 - 2024 Thomas S Brown. All Rights Reserved.</p>
     </footer>
 
     <!-- Main JS Files -->

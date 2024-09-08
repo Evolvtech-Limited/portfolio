@@ -61,12 +61,50 @@ async function loadTranslation(language) {
         // Map translation keys to corresponding HTML element IDs
         updateElementText('abts', translations.abts);
         updateElementText('experiense', translations.experiense);
+        updateElementText('nav-about', translations.abts);
+        updateElementText('nav-experiense', translations.experiense);
+        updateElementText('nav-contact', translations.contacts);
         updateElementText('welcome', translations.welcome);
         updateElementText('fullstack_developer', translations.fullstack_developer);
         updateElementText('about_me', translations.about_me);
         updateElementText('contact_me', translations.contact_me);
         updateElementText('download_cv', translations.download_cv);
         updateElementText('contact_info', translations.contact_info);
+        updateElementText('getToKnowMore', translations.getToKnowMore);
+        updateElementText('about-experience', translations.experiense);
+        updateElementText('exp-years', translations.exp_years);
+        updateElementText('fullstack_development', translations.fullstack_development);
+        updateElementText('education', translations.education);
+        updateElementText('sommaire', translations.sommaire);
+        updateElementText('explore', translations.explore);
+        updateElementText('exp', translations.expe);
+        updateElementText('progLang', translations.progLang);
+        updateElementText('front_tech', translations.front_tech);
+        updateElementText('back_tech', translations.back_tech);
+        updateElementText('db_m', translations.db_m);
+        updateElementText('version_control', translations.version_control);
+        updateElementText('cloud_service', translations.cloud_service);
+        updateElementText('os', translations.os);
+        updateElementText('vm', translations.vm);
+        updateElementText('get_in_touch', translations.get_in_touch);
+        updateElementText('email_me', translations.email_me);
+        updateElementText('footer_about', translations.abts);
+        updateElementText('footer_experience', translations.experiense);
+        updateElementText('footer_contact', translations.contacts);
+        updateElementText('copyrighta', translations.copyrighta);
+
+        // Translate all <p> tags with "Advanced" to "Expert" if French is selected
+        if (language === 'fr') {
+            const pElements = document.querySelectorAll('p');
+            pElements.forEach((p) => {
+                if (p.innerText.trim() === 'Advanced') {
+                    p.innerText = 'Expert';
+                }
+                if (p.innerText.trim() === 'Intermediate') {
+                    p.innerText = 'Compétent';
+                }
+            });
+        }
 
     } catch (error) {
         console.error('Error loading translation:', error);
