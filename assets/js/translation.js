@@ -121,6 +121,8 @@ async function initTranslation() {
         language = 'fr';
     } else if (countryCode === 'ES') {
         language = 'es';
+    } else if (countryCode === 'DE') {
+        language = 'de';
     }
     // Additional conditions for other languages can be added here
 
