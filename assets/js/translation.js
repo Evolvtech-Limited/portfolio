@@ -106,6 +106,20 @@ async function loadTranslation(language) {
             });
         }
 
+        // Translate all <p> tags with "Advanced" to "Expert" if French is selected
+        if (language === 'de') {
+            const pElements = document.querySelectorAll('p');
+            pElements.forEach((p) => {
+                if (p.innerText.trim() === 'Advanced') {
+                    p.innerText = 'Experte';
+                }
+                if (p.innerText.trim() === 'Intermediate') {
+                    p.innerText = 'Mittelstufe';
+                }
+            });
+        }
+
+
     } catch (error) {
         console.error('Error loading translation:', error);
     }
