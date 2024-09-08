@@ -93,7 +93,7 @@ async function loadTranslation(language) {
         updateElementText('footer_contact', translations.contacts);
         updateElementText('copyrighta', translations.copyrighta);
 
-        // Translate all <p> tags with "Advanced" to "Expert" if French is selected
+        // Translate all <p> tags with "Advanced" to the corresponding word based on the language selected
         if (language === 'fr') {
             const pElements = document.querySelectorAll('p');
             pElements.forEach((p) => {
@@ -104,10 +104,17 @@ async function loadTranslation(language) {
                     p.innerText = 'Compétent';
                 }
             });
-        }
-
-        // Translate all <p> tags with "Advanced" to "Expert" if French is selected
-        if (language === 'de') {
+        } else if (language === 'es') {
+            const pElements = document.querySelectorAll('p');
+            pElements.forEach((p) => {
+                if (p.innerText.trim() === 'Avanced') {
+                    p.innerText = 'Experto';
+                }
+                if (p.innerText.trim() === 'Intermediate') {
+                    p.innerText = 'Competente';
+                }
+            });
+        } else if (language === 'de') {
             const pElements = document.querySelectorAll('p');
             pElements.forEach((p) => {
                 if (p.innerText.trim() === 'Advanced') {
