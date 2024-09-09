@@ -63,65 +63,6 @@
       gtag('config', 'G-PQP9199DFY');
     </script>
 
-<!--    &lt;!&ndash; Call-to-action button | Start of Async Drift Code &ndash;&gt;-->
-<!--    <script>-->
-<!--      "use strict";-->
-
-<!--      (function() {-->
-<!--        const drift = window.driftt = window.drift = window.driftt || [];-->
-
-<!--        if (!drift.init) {-->
-<!--          if (drift.invoked) {-->
-<!--            if (window.console && console.error) {-->
-<!--              console.error("Drift snippet included twice.");-->
-<!--            }-->
-<!--            return;-->
-<!--          }-->
-
-<!--          drift.invoked = true;-->
-<!--          drift.methods = [-->
-<!--            "identify", "config", "track", "reset", "debug", "show",-->
-<!--            "ping", "page", "hide", "off", "on"-->
-<!--          ];-->
-
-<!--          drift.factory = function(method) {-->
-<!--            return function() {-->
-<!--              const args = Array.prototype.slice.call(arguments);-->
-<!--              args.unshift(method);-->
-<!--              drift.push(args);-->
-<!--              return drift;-->
-<!--            };-->
-<!--          };-->
-
-<!--          drift.methods.forEach(function(method) {-->
-<!--            drift[method] = drift.factory(method);-->
-<!--          });-->
-
-<!--          drift.load = function(accountId) {-->
-<!--            const timeInterval = 300000; // 5 minutes in milliseconds-->
-<!--            const timestamp = Math.ceil(new Date() / timeInterval) * timeInterval;-->
-<!--            const script = document.createElement("script");-->
-
-<!--            script.type = "text/javascript";-->
-<!--            script.async = true;-->
-<!--            script.crossOrigin = "anonymous";-->
-<!--            script.src = `https://js.driftt.com/include/${timestamp}/${accountId}.js`;-->
-
-<!--            const firstScript = document.getElementsByTagName("script")[0];-->
-<!--            firstScript.parentNode.insertBefore(script, firstScript);-->
-<!--          };-->
-
-<!--          // Mark that the Drift snippet has been initialized-->
-<!--          drift.init = true;-->
-<!--        }-->
-<!--      })();-->
-
-<!--      drift.SNIPPET_VERSION = '0.3.1';-->
-<!--      drift.load('928v33akxcpz');-->
-<!--    </script>-->
-
-    <!-- Call-to-action button -->
-
     <!-- JavaScript for Translation -->
     <script src="assets/js/translation.js" defer></script>
   </head>
