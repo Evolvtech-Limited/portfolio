@@ -62,12 +62,22 @@
         </div>
 
         <!-- Right Column: Google Form -->
-        <div class="col-lg-6 col-md-12">
-          <div class="card mb-4">
+        <div class="col-lg-6 col-md-12 d-flex flex-column">
+          <div class="card mb-4 flex-fill">
             <div class="card-body">
               <h3 class="card-title">Survey Form</h3>
-              <div class="responsive-iframe">
-                <iframe id="dynamic-iframe" src="https://docs.google.com/forms/d/e/1FAIpQLSeTyfHJsOChR56XuF8NwMmRlK-G7z248e3CQ-xjYPuuknR1wg/viewform?embedded=true" width="640" height="805" frameborder="0" marginheight="0" marginwidth="0" loading="lazy">Loading…</iframe>
+              <div class="responsive-iframe flex-grow-1">
+                <iframe
+                    id="dynamic-iframe"
+                    src="https://docs.google.com/forms/d/e/1FAIpQLSeTyfHJsOChR56XuF8NwMmRlK-G7z248e3CQ-xjYPuuknR1wg/viewform?embedded=true"
+                    style="width:100%; height:992px;"
+                    frameborder="0"
+                    marginheight="0"
+                    marginwidth="0"
+                    scrolling="no"
+                    loading="lazy">
+                  Loading…
+                </iframe>
               </div>
             </div>
           </div>
@@ -85,18 +95,18 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script>
       // Adjust iframe height dynamically based on left column
-      function adjustIframeHeight() {
-        const leftColumn = document.getElementById('left-column');
-        const iframe = document.getElementById('dynamic-iframe');
-        const leftColumnHeight = leftColumn.offsetHeight;
-
-        // Set iframe height equal to left column height
-        iframe.style.height = leftColumnHeight + 'px';
-      }
-
-      // Adjust iframe height on page load and window resize
-      window.addEventListener('load', adjustIframeHeight);
-      window.addEventListener('resize', adjustIframeHeight);
+      // function adjustIframeHeight() {
+      //   const leftColumn = document.getElementById('left-column');
+      //   const iframe = document.getElementById('dynamic-iframe');
+      //   const leftColumnHeight = leftColumn.offsetHeight;
+      //
+      //   // Set iframe height equal to left column height
+      //   iframe.style.height = leftColumnHeight + 'px';
+      // }
+      //
+      // // Adjust iframe height on page load and window resize
+      // window.addEventListener('load', adjustIframeHeight);
+      // window.addEventListener('resize', adjustIframeHeight);
 
       // Function to close announcement bar
       function closeAnnouncementBar() {

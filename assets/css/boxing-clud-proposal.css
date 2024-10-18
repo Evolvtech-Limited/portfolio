@@ -2,7 +2,7 @@ body {
     background-color: #f4f7fc;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: #333;
-
+    padding-bottom: 60px; /* Adjust this value for more or less space */
 }
 
 h1, h3 {
@@ -38,7 +38,8 @@ h1, h3 {
 /* Container styling */
 .container {
     max-width: 1200px;
-    margin: auto;
+    /*margin: auto;*/
+    margin-bottom: 30px; /* Adjust this value for more or less space */
 }
 
 /* Card styling */
@@ -101,21 +102,19 @@ footer a:hover {
 }
 
 /* Responsive iframe container styling */
-.responsive-iframe {
-    flex: 1rem; /* Allow the div to grow to fill available height */
-    display: flex;
-    flex-direction: column;
-    justify-content: center; /* Center the iframe within the div */
-}
+/*.responsive-iframe {*/
+/*    flex: 1rem; !* Allow the div to grow to fill available height *!*/
+/*    display: flex;*/
+/*    flex-direction: column;*/
+/*    justify-content: center; !* Center the iframe within the div *!*/
+/*}*/
 
-.responsive-iframe iframe {
-    width: 100%;
-    min-height: 500px; /* Ensure iframe has a minimum height */
-    height: 100%; /* Ensure iframe fills its container */
-    border: 0;
-    border-radius: 8px;
-    /*box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);*/
-}
+/*.responsive-iframe iframe {*/
+/*    width: 100%;*/
+/*    border: 0;*/
+/*    border-radius: 8px;*/
+/*    !*box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);*!*/
+/*}*/
 
 /* Improved button styles */
 .btn-custom {
