@@ -10,7 +10,7 @@
           integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
           crossorigin="anonymous"
       >
-      <link rel="stylesheet" href="assets/css/boxing-clud-proposal.css">
+      <link rel="stylesheet" href="assets/css/boxing-club-proposal.css">
   </head>
 
   <body class="body-with-announcement">
@@ -27,7 +27,7 @@
       <div class="row g-4">
         <!-- Left Column: Content -->
         <div id="left-column" class="col-lg-6 col-md-12">
-          <div class="card mb-4">
+          <div class="card mb-4 shadow-sm">
             <div class="card-body">
               <h3 class="card-title">Introduction</h3>
               <p class="card-text">
@@ -63,7 +63,7 @@
 
         <!-- Right Column: Google Form -->
         <div class="col-lg-6 col-md-12 d-flex flex-column">
-          <div class="card mb-4 flex-fill">
+          <div class="card mb-4 flex-fill shadow-sm">
             <div class="card-body">
               <h3 class="card-title">Survey Form</h3>
               <div class="responsive-iframe flex-grow-1">
@@ -92,22 +92,12 @@
       </p>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous">
+    </script>
     <script>
-      // Adjust iframe height dynamically based on left column
-      // function adjustIframeHeight() {
-      //   const leftColumn = document.getElementById('left-column');
-      //   const iframe = document.getElementById('dynamic-iframe');
-      //   const leftColumnHeight = leftColumn.offsetHeight;
-      //
-      //   // Set iframe height equal to left column height
-      //   iframe.style.height = leftColumnHeight + 'px';
-      // }
-      //
-      // // Adjust iframe height on page load and window resize
-      // window.addEventListener('load', adjustIframeHeight);
-      // window.addEventListener('resize', adjustIframeHeight);
-
       // Function to close announcement bar
       function closeAnnouncementBar() {
         document.getElementById('announcement-bar').style.display = 'none';
